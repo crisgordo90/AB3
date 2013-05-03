@@ -121,11 +121,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Account\Login.aspx" />
-    <Content Include="Account\Manage.aspx" />
-    <Content Include="Account\OpenAuthProviders.ascx" />
-    <Content Include="Account\Register.aspx" />
-    <Content Include="Account\RegisterExternalLogin.aspx" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -197,12 +192,8 @@
     <Content Include="Images\Usuario.png" />
     <Content Include="Images\Usuario2.png" />
     <Content Include="Interfaz\Default.aspx" />
-    <Content Include="Interfaz\Empresa.aspx" />
-    <Content Include="Interfaz\ModificarPersona.aspx" />
-    <Content Include="Interfaz\PerfilEmpresa.aspx" />
     <Content Include="Interfaz\PerfilPersona.aspx" />
     <Content Include="Interfaz\Persona.aspx" />
-    <Content Include="Interfaz\RegistroEmpresa.aspx" />
     <Content Include="Interfaz\RegistroPersona.aspx" />
     <Content Include="packages.config" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
@@ -239,50 +230,11 @@
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App_Start\BundleConfig.cs" />
-    <Compile Include="App_Start\AuthConfig.cs" />
-    <Compile Include="Account\Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\Manage.aspx.cs">
-      <DependentUpon>Manage.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\Manage.aspx.designer.cs">
-      <DependentUpon>Manage.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\OpenAuthProviders.ascx.cs">
-      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\OpenAuthProviders.ascx.designer.cs">
-      <DependentUpon>OpenAuthProviders.ascx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\Register.aspx.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\Register.aspx.designer.cs">
-      <DependentUpon>Register.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Account\RegisterExternalLogin.aspx.cs">
-      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Account\RegisterExternalLogin.aspx.designer.cs">
-      <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
-    </Compile>
+    <Compile Include="Clases\App_Start\BundleConfig.cs" />
+    <Compile Include="Clases\App_Start\AuthConfig.cs" />
     <Compile Include="Clases\cAdministradorDatos.cs" />
     <Compile Include="Clases\cCorreoComunicacion.cs" />
-    <Compile Include="Clases\cEmpleosDatos.cs" />
-    <Compile Include="Clases\cEmpresaDatos.cs" />
     <Compile Include="Clases\cGeneralMetodos.cs" />
-    <Compile Include="Clases\cPersonaDatos.cs" />
-    <Compile Include="Clases\Service1.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -292,27 +244,6 @@
     </Compile>
     <Compile Include="Interfaz\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Interfaz\Empresa.aspx.cs">
-      <DependentUpon>Empresa.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Interfaz\Empresa.aspx.designer.cs">
-      <DependentUpon>Empresa.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Interfaz\ModificarPersona.aspx.cs">
-      <DependentUpon>ModificarPersona.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Interfaz\ModificarPersona.aspx.designer.cs">
-      <DependentUpon>ModificarPersona.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Interfaz\PerfilEmpresa.aspx.cs">
-      <DependentUpon>PerfilEmpresa.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Interfaz\PerfilEmpresa.aspx.designer.cs">
-      <DependentUpon>PerfilEmpresa.aspx</DependentUpon>
     </Compile>
     <Compile Include="Interfaz\PerfilPersona.aspx.cs">
       <DependentUpon>PerfilPersona.aspx</DependentUpon>
@@ -327,13 +258,6 @@
     </Compile>
     <Compile Include="Interfaz\Persona.aspx.designer.cs">
       <DependentUpon>Persona.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Interfaz\RegistroEmpresa.aspx.cs">
-      <DependentUpon>RegistroEmpresa.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Interfaz\RegistroEmpresa.aspx.designer.cs">
-      <DependentUpon>RegistroEmpresa.aspx</DependentUpon>
     </Compile>
     <Compile Include="Interfaz\RegistroPersona.aspx.cs">
       <DependentUpon>RegistroPersona.aspx</DependentUpon>
@@ -355,7 +279,6 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Account\Web.config" />
     <Content Include="Site.Master" />
   </ItemGroup>
   <ItemGroup>

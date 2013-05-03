@@ -9,7 +9,6 @@
                 <nav class="menu" runat="server">
                     <ul>
                         <li><a href="Default.aspx">Inicio</a></li>
-                        <!--<li><a href="Default.aspx">Perfil</a></li>-->
                         <li><a href="Default.aspx">Buscar</a></li>
                         <li><a href="Default.aspx">Contactar</a></li>
                         <li><a href="Default.aspx">Acerca</a></li>
@@ -26,10 +25,6 @@
                 <td><asp:TextBox ID="txtNombre" class="txt" runat="server" Height="20px" Width="200px" /></td>
                 <td><div class="asterisco"> *</div></td>
             </tr>
-            <!--<tr>
-                <td><asp:Label runat="server" Text="Cédula:" /></td>
-                <td><asp:TextBox class="txt" runat="server" placeholder="1-1111-1111" ID="txtCedula" /></td>
-            </tr>-->
             <tr>
                 <td><asp:Label ID="Label2" class="lblRegistrar" runat="server" Text="Correo electrónico:" /></td>
                 <td><asp:TextBox ID="txtCorreo" Class="txt" runat="server" placeholder="example@mail.com" Height="20px" Width="200px" /></td>
@@ -37,39 +32,29 @@
             </tr>
             <tr>
                 <td><asp:Label ID="Label3" class="lblRegistrar" runat="server" Text="Teléfono:" /></td>
-                <td><asp:TextBox ID="txtTelefono" class="txt" runat="server" placeholder="0000-0000" Height="20px" Width="200px" /></td>
-                <td><div class="asterisco"> *</div></td>
-            </tr>
-            <!--<tr>
-                <td><asp:Label class="lblRegistrar" runat="server" Text="Idioma(s):" /></td>
-                <td><asp:DropDownList ID="cmbIdioma" class="txt" runat="server" /></td>
-            </tr>-->
-            <tr>
-                <td>&nbsp;</td>
-                <td>&nbsp;</td>
-                <!--<td>
-                    <asp:RadioButton runat="server" Text="Empleado" GroupName="rbtCondicionLaboral" ID="rbEmpleado" />
-                    <asp:RadioButton runat="server" Text="Desempleado" GroupName="rbtCondicionLaboral" ID="rbDesempleado" />
-                </td>-->
-            </tr>
-            <tr>
-                <td><asp:Label ID="Label5" class="lblRegistrar" runat="server" Text="Contraseña:" /></td>
-                <td><asp:TextBox class="txt" runat="server" ID="txtContrasena" TextMode="Password" ToolTip="La contraseña debe tiener un mínimo de 9 caracteres." Height="20px" Width="200px" /></td>
+                <td><asp:TextBox ID="txtTelefono" class="txt" runat="server" placeholder="506-4354-4323" Height="20px" Width="200px"/></td>
                 <td><div class="asterisco"> *</div></td>
             </tr>
             <tr>
-                <td><asp:Label ID="Label6" class="lblRegistrar" runat="server" Text="Confirmar contraseña:" /></td>
-                <td><asp:TextBox ID="txtConfirmarContrasena" class="txt" runat="server" TextMode="Password" Height="20px" Width="200px" /></td>
+                <td><asp:Label ID="Label8" class="lblRegistrar" runat="server" Text="Ciudad:" /></td>
+                <td><asp:TextBox ID="txtCiudad" class="txt" runat="server" placeholder="" Height="20px" Width="200px" /></td>
+                <td><div class="asterisco"> *</div></td>
+            </tr>
+            <tr>
+                <td><asp:Label ID="Label4" class="lblRegistrar" runat="server" Text="Estado:" /></td>
+                <td><asp:TextBox ID="txtEstado" class="txt" runat="server" placeholder="" Height="20px" Width="200px"/></td>
+                <td><div class="asterisco"> *</div></td>
+            </tr>
+            <tr>
+                <td><asp:Label ID="Label5" class="lblRegistrar" runat="server" Text="Codigo Postal:" /></td>
+                <td><asp:TextBox ID="txtCodigoPostal" class="txt" runat="server" placeholder="" Height="20px" Width="200px"/></td>
                 <td><div class="asterisco"> *</div></td>
             </tr>
             <tr>
                 <td><asp:Label ID="Label7" class="lblRegistrar" runat="server" Text="Dirección:" /></td>
                 <td><asp:TextBox ID="txtDireccion" class="txta" runat="server" TextMode="MultiLine" Width="200px" /></td>
+                <td><div class="asterisco"> *</div></td>
             </tr>
-            <!--<tr>
-                <td><asp:Label class="lblRegistrar" runat="server" Text="Experiencia Laboral:" /></td>
-                <td><asp:TextBox Class="txta" runat="server" TextMode="MultiLine" ID="txtExperiencia" /></td>
-            </tr>-->
             <tr>
                 <td></td>
                 <td><asp:Image ID="imgError" Visible="false" class="imgError" runat="server" ImageUrl="/Images/error1.png" />
