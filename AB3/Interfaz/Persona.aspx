@@ -1,10 +1,8 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeBehind="Persona.aspx.cs" Inherits="AB3.Interfaz.Persona" %>
-<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-</asp:Content>
+<asp:Content ID="head2" ContentPlaceHolderID="head" runat="server"></asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
     <form runat="server">
-        <div runat="server">
-            <div class="inicio" runat="server">
+        <div class="inicio" runat="server">
                 <nav class="menu" runat="server">
                     <ul>
                         <li><a href="Default.aspx">Inicio</a></li>
@@ -14,7 +12,6 @@
                         <li><a href="Default.aspx">Acerca</a></li>
                     </ul>
                 </nav>
-            </div>
         </div>
         <div id="3" class="borderPerfilEmpresaPersona">
         <div class="titulo">Candidato</div>

@@ -1,9 +1,5 @@
 ﻿<%@ Page Title="Página principal" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="AB3._Default" %>
-<asp:Content ID="head2" ContentPlaceHolderID="head" runat="server">
-    <link rel="stylesheet" type="text/css" href="../CSS/style-news.css" />
-
-</asp:Content>
-
+<asp:Content ID="head2" ContentPlaceHolderID="head" runat="server"></asp:Content>
 <asp:Content ID="Content1" ContentPlaceHolderID="Body" runat="server">
     <form id="Principal" runat="server">
         <div class="inicio" runat="server">

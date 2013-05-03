@@ -1,19 +1,6 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeBehind="PerfilPersona.aspx.cs" Inherits="AB3.Interfaz.PerfilPersona" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <style type="text/css">
-        .auto-style1 {
-            margin-left: 10px;
-            text-align: left;
-            vertical-align: text-top;
-            height: 48px;
-        }
-        .auto-style2 {
-            margin-left: 10px;
-            text-align: left;
-            vertical-align: text-top;
-            height: 22px;
-        }
-    </style>
+ 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="Body" runat="server">
     <form runat="server">
