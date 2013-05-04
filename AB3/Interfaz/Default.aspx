@@ -6,10 +6,8 @@
             <nav class="menu" runat="server">
                 <ul>
                     <li><a href="Default.aspx">Inicio</a></li>
-                    <!--<li><a href="Default.aspx">Perfil</a></li>-->
-                    <li><a href="Default.aspx">Buscar</a></li>
-                    <li><a href="RegistroEmpresa.aspx">Contactar</a></li>
-                    <li><asp:LinkButton runat="server" Text="Acerca" OnClick="prueba_Click" /></li>
+                    <li><a href="Buscar.aspx">Buscar</a></li>
+                    <li><a href="Comprar.aspx">Comprar</a></li>
                 </ul>
             </nav>
             <div id="Login" class="login">
@@ -21,20 +19,18 @@
         <div class="register">
             <div class="titulo"></div>
             <hr />
-            <asp:HyperLink ID="btnRegPersona" runat="server" NavigateUrl="~/Interfaz/RegistroPersona.aspx">
+            <asp:HyperLink ID="btnRegPersona" runat="server" NavigateUrl="~/Interfaz/AgregarPersona.aspx">
                 <asp:Image class="RegistroImagen" ID="imgRegPersona" runat="server" ImageUrl="~/Images/Usuario2.png" />
             </asp:HyperLink>
-           <!-- <asp:Button ID="jdo"></asp:Button>
-            <br />
-            <asp:HyperLink ID="btnRegEmpresa" runat="server" NavigateUrl="~/Interfaz/RegistroEmpresa.aspx">
-                <asp:Image class="RegistroImagen" ID="imgRegEmpresa" runat="server" ImageUrl="~/Images/Empresa2.png" />
-            </asp:HyperLink>-->
+        </div>
+        <div class="registrar">
+    <div class="titulo">Libros</div>
+        <br/>
+            <asp:GridView ID="gvLibros" runat="server">
+            </asp:GridView>
+
         </div>
     </form>
-    <div id="page-wrap">
-
-
-    </div>
 </asp:Content>
 
 

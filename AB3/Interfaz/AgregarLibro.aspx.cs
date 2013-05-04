@@ -8,31 +8,28 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-
-
-namespace AB3
+namespace AB3.Interfaz
 {
-    public partial class RegistroPersona : System.Web.UI.Page
+    public partial class AgregarLibro : System.Web.UI.Page
     {
-        
         protected void Page_Load(object sender, EventArgs e)
         {
-             
+
         }
+
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
+
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString);
             SqlCommand cmd = new SqlCommand("insertar_usuario", con);
             cmd.CommandType = CommandType.StoredProcedure;
-            cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = txtNombre.Text;
-            cmd.Parameters.Add("@direccion", SqlDbType.VarChar).Value = txtDireccion.Text;
-            cmd.Parameters.Add("@ciudad", SqlDbType.VarChar).Value = txtCiudad.Text;
-            cmd.Parameters.Add("@estado", SqlDbType.VarChar).Value = txtEstado.Text;
-            cmd.Parameters.Add("@codigo_postal", SqlDbType.VarChar).Value = txtCodigoPostal.Text;
-            cmd.Parameters.Add("@telefono", SqlDbType.VarChar).Value = txtTelefono.Text;
-            cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = txtCorreo.Text;
-            cmd.Parameters.Add("@activo", SqlDbType.Char).Value = '0';
-
+            cmd.Parameters.Add("@ISBM", SqlDbType.VarChar).Value = txtISBM.Text;
+            cmd.Parameters.Add("@titulo", SqlDbType.VarChar).Value = txtTitulo.Text;
+            cmd.Parameters.Add("@autor", SqlDbType.VarChar).Value = txtAutor.Text;
+            cmd.Parameters.Add("@anio_publicacion", SqlDbType.VarChar).Value = txtAnio.Text;
+            cmd.Parameters.Add("@stock", SqlDbType.VarChar).Value = txtStock.Text;
+            cmd.Parameters.Add("@costo", SqlDbType.VarChar).Value = txtCosto.Text;
+            cmd.Parameters.Add("@tienda", SqlDbType.VarChar).Value = txtTienda.Text;
             try
             {
                 con.Open();
@@ -55,20 +52,17 @@ namespace AB3
             con.Close();
         }
 
-        protected void btnCancelar_Click(object sender, EventArgs e)
-        {
-            Response.Redirect("~/Interfaz/Default.aspx");
-            Limpiar();
-        }
 
         protected void Limpiar()
         {
             imgError.Visible = false;
-            txtNombre.Text = "";
-            txtCorreo.Text = "";
-            txtTelefono.Text = "";
-            txtDireccion.Text = "";
-            msgError.Text = "";
+            txtISBM.Text ="";
+            txtTitulo.Text = "";
+            txtAutor.Text = "";
+            txtAnio.Text = "";
+            txtStock.Text = "";
+            txtCosto.Text = "";
+            txtTienda.Text = "";
         }
     }
 }

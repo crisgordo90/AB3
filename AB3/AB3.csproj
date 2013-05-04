@@ -177,7 +177,6 @@
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="CSS\Images.css" />
-    <Content Include="CSS\Site.css" />
     <Content Include="CSS\sRegistrar.css" />
     <Content Include="CSS\style-news.css" />
     <Content Include="CSS\Styles.css" />
@@ -191,9 +190,13 @@
     <Content Include="Images\head2.jpg" />
     <Content Include="Images\Usuario.png" />
     <Content Include="Images\Usuario2.png" />
+    <Content Include="Interfaz\AgregarAutor.aspx" />
+    <Content Include="Interfaz\AgregarLibro.aspx" />
+    <Content Include="Interfaz\AgregarPersona.aspx" />
+    <Content Include="Interfaz\BajaLibro.aspx" />
+    <Content Include="Interfaz\BajaPersona.aspx" />
+    <Content Include="Interfaz\Buscar.aspx" />
     <Content Include="Interfaz\Default.aspx" />
-    <Content Include="Interfaz\PerfilPersona.aspx" />
-    <Content Include="Interfaz\Persona.aspx" />
     <Content Include="Interfaz\RegistroPersona.aspx" />
     <Content Include="packages.config" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
@@ -226,17 +229,59 @@
     <Content Include="Scripts\_references.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Web.config" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Bundle.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clases\App_Start\BundleConfig.cs" />
     <Compile Include="Clases\App_Start\AuthConfig.cs" />
-    <Compile Include="Clases\cAdministradorDatos.cs" />
-    <Compile Include="Clases\cCorreoComunicacion.cs" />
     <Compile Include="Clases\cGeneralMetodos.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\AgregarAutor.aspx.cs">
+      <DependentUpon>AgregarAutor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaz\AgregarAutor.aspx.designer.cs">
+      <DependentUpon>AgregarAutor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\AgregarLibro.aspx.cs">
+      <DependentUpon>AgregarLibro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaz\AgregarLibro.aspx.designer.cs">
+      <DependentUpon>AgregarLibro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\AgregarPersona.aspx.cs">
+      <DependentUpon>AgregarPersona.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaz\AgregarPersona.aspx.designer.cs">
+      <DependentUpon>AgregarPersona.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\BajaLibro.aspx.cs">
+      <DependentUpon>BajaLibro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaz\BajaLibro.aspx.designer.cs">
+      <DependentUpon>BajaLibro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\BajaPersona.aspx.cs">
+      <DependentUpon>BajaPersona.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaz\BajaPersona.aspx.designer.cs">
+      <DependentUpon>BajaPersona.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\Buscar.aspx.cs">
+      <DependentUpon>Buscar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaz\Buscar.aspx.designer.cs">
+      <DependentUpon>Buscar.aspx</DependentUpon>
     </Compile>
     <Compile Include="Interfaz\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
@@ -244,20 +289,6 @@
     </Compile>
     <Compile Include="Interfaz\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Interfaz\PerfilPersona.aspx.cs">
-      <DependentUpon>PerfilPersona.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Interfaz\PerfilPersona.aspx.designer.cs">
-      <DependentUpon>PerfilPersona.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Interfaz\Persona.aspx.cs">
-      <DependentUpon>Persona.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Interfaz\Persona.aspx.designer.cs">
-      <DependentUpon>Persona.aspx</DependentUpon>
     </Compile>
     <Compile Include="Interfaz\RegistroPersona.aspx.cs">
       <DependentUpon>RegistroPersona.aspx</DependentUpon>

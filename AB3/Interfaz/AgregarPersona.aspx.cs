@@ -8,16 +8,13 @@ using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 
-
-
-namespace AB3
+namespace AB3.Interfaz
 {
-    public partial class RegistroPersona : System.Web.UI.Page
+    public partial class AgregarPersona : System.Web.UI.Page
     {
-        
         protected void Page_Load(object sender, EventArgs e)
         {
-             
+
         }
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {

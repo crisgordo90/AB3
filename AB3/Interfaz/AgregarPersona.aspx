@@ -1,12 +1,12 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeBehind="RegistroPersona.aspx.cs" Inherits="AB3.RegistroPersona" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeBehind="AgregarPersona.aspx.cs" Inherits="AB3.Interfaz.AgregarPersona" %>
 <asp:Content ContentPlaceHolderID="head" runat="server">
 
 </asp:Content>
 <asp:Content ContentPlaceHolderID="Body" runat="server">
-    <form runat="server">
-        <div runat="server">
-            <div class="inicio" runat="server">
-                <nav class="menu" runat="server">
+    <form id="Form1" runat="server">
+        <div id="Div1" runat="server">
+            <div id="Div2" class="inicio" runat="server">
+                <nav id="Nav1" class="menu" runat="server">
                     <ul>
                         <li><a href="Default.aspx">Inicio</a></li>
                         <li><a href="Default.aspx">Buscar</a></li>
@@ -14,7 +14,7 @@
                 </nav>
             </div>
         </div>
-        <div class="registrar" runat="server">
+        <div id="Div3" class="registrar" runat="server">
         <div class="titulo">Registrar Usuario</div>
         <br/>
         <table>

@@ -12,40 +12,56 @@ using System.Web.UI.HtmlControls;
 using System.Xml.Linq;
 using System.Web.DynamicData;
 using AB3.Clases;
+using System.Data.SqlClient;
 
 namespace AB3
 {
+    
     public partial class _Default : System.Web.UI.Page
     {
+        public string Nombre;
         protected void Page_Load(object sender, EventArgs e)
         {
             //if (Site.USUARIO.equal("")) 
             //{
  
             //}
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("select * from tabla_libro", con);
+            con.Open();
+
+            SqlDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+            DataTable dt = new DataTable();
+            dt.Load(dr);
+            gvLibros.DataSource = dt;
+            gvLibros.DataBind();
+
+            con.Close();
         }
 
         protected void btnIniciarSesion_Click(object sender, EventArgs e)
         {
-          /* String usuario = persona.IniciarSesion(txtCorreo.Text, txtContrasena.Text);
-            if (usuario.Equals(""))
-            {
+            SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString);
+            SqlCommand cmd = new SqlCommand("login", con);
+            cmd.CommandType = CommandType.StoredProcedure;
+            con.Open();
 
-            }
-            else 
-            {
-                ClientScript.RegisterStartupScript(GetType(), "UsuarioActual", "Sesion('"+ usuario +"')", true);
-            }
-            */
+            SqlDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
 
-            //cCorreoComunicacion ins = new cCorreoComunicacion();
-            //txtCorreo.Text = ins.SendMail("jeragones@hotmail.com", "jeragones@gmail.com", "Hola", "Si funciona !!!");
+            Console.WriteLine("{0}, {1}", dr.GetName(0), dr.GetName(1));
+
+            while (dr.Read())
+            {
+                Console.WriteLine("{0}, ${1}", dr.GetString(0), dr.GetDecimal(1));
+            }
+
+            dr.Close();
+            con.Close();
         }
 
         protected void prueba_Click(object sender, EventArgs e)
         {
             
         }
-
     }
 }
