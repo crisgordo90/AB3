@@ -19,31 +19,45 @@ namespace AB3
     
     public partial class _Default : System.Web.UI.Page
     {
-        public string Nombre;
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (Site.USUARIO.equal("")) 
-            //{
- 
-            //}
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString);
             SqlCommand cmd = new SqlCommand("select * from tabla_libro", con);
-            con.Open();
+            
+            try
+            {
+                con.Open();
+                cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                msgError.Text = ex.Message;
+            }
+             if (msgError.Text.Equals(""))
+            {
+                Response.Redirect("~/Interfaz/Default.aspx");
+                Limpiar();
+            }
+            else
+            {
+                imgError.Visible = true;
+            }
 
-            SqlDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
-            DataTable dt = new DataTable();
-            dt.Load(dr);
-            gvLibros.DataSource = dt;
-            gvLibros.DataBind();
-
+             SqlDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
+             DataTable dt = new DataTable();
+             dt.Load(dr);
+             gvLibros.DataSource = dt;
+             gvLibros.DataBind();
             con.Close();
         }
 
         protected void btnIniciarSesion_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString);
-            SqlCommand cmd = new SqlCommand("login", con);
+            SqlCommand cmd = new SqlCommand("loginCheck2", con);
             cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.Add("@username", SqlDbType.VarChar).Value = txtCorreo.Text;
+            cmd.Parameters.Add("@password", SqlDbType.VarChar).Value = txtContrasena.Text;
             con.Open();
 
             SqlDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
@@ -55,6 +69,10 @@ namespace AB3
                 Console.WriteLine("{0}, ${1}", dr.GetString(0), dr.GetDecimal(1));
             }
 
+            btnIniciarSesion.Visible = false;
+            txtContrasena.Visible = false;
+            txtCorreo.Visible = false;
+            LblLogin.Text = txtCorreo.Text;
             dr.Close();
             con.Close();
         }
@@ -62,6 +80,14 @@ namespace AB3
         protected void prueba_Click(object sender, EventArgs e)
         {
             
+        }
+
+         protected void Limpiar()
+        {
+            imgError.Visible = false;
+            txtContrasena.Text = "";
+            txtCorreo.Text = "";
+            msgError.Text = "";
         }
     }
 }

@@ -197,7 +197,9 @@
     <Content Include="Interfaz\BajaPersona.aspx" />
     <Content Include="Interfaz\Buscar.aspx" />
     <Content Include="Interfaz\Default.aspx" />
-    <Content Include="Interfaz\RegistroPersona.aspx" />
+    <Content Include="Interfaz\EditarAutor.aspx" />
+    <Content Include="Interfaz\EditarLibro.aspx" />
+    <Content Include="Interfaz\EditarPersona.aspx" />
     <Content Include="packages.config" />
     <None Include="Scripts\jquery-1.7.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.7.1.js" />
@@ -290,12 +292,26 @@
     <Compile Include="Interfaz\Default.aspx.designer.cs">
       <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Interfaz\RegistroPersona.aspx.cs">
-      <DependentUpon>RegistroPersona.aspx</DependentUpon>
+    <Compile Include="Interfaz\EditarAutor.aspx.cs">
+      <DependentUpon>EditarAutor.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Interfaz\RegistroPersona.aspx.designer.cs">
-      <DependentUpon>RegistroPersona.aspx</DependentUpon>
+    <Compile Include="Interfaz\EditarAutor.aspx.designer.cs">
+      <DependentUpon>EditarAutor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\EditarLibro.aspx.cs">
+      <DependentUpon>EditarLibro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaz\EditarLibro.aspx.designer.cs">
+      <DependentUpon>EditarLibro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\EditarPersona.aspx.cs">
+      <DependentUpon>EditarPersona.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaz\EditarPersona.aspx.designer.cs">
+      <DependentUpon>EditarPersona.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Site.Master.cs">

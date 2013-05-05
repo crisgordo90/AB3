@@ -10,13 +10,12 @@ using System.Web.UI.WebControls;
 
 namespace AB3.Interfaz
 {
-    public partial class AgregarAutor : System.Web.UI.Page
+    public partial class EditarAutor : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+
         }
-            
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString);
@@ -60,12 +59,12 @@ namespace AB3.Interfaz
         protected void Limpiar()
         {
             imgError.Visible = false;
-            txtNombre.Text="";
-            txtNacimiento.Text="";
-            txtFallecimiento.Text="";
-            txtEdad.Text="";
-            txtPais.Text="";
-            txtBiografia.Text="";
+            txtNombre.Text = "";
+            txtNacimiento.Text = "";
+            txtFallecimiento.Text = "";
+            txtEdad.Text = "";
+            txtPais.Text = "";
+            txtBiografia.Text = "";
         }
 
     }
