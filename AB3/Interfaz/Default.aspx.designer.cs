@@ -76,76 +76,85 @@ namespace AB3 {
         protected global::System.Web.UI.WebControls.Label msgError;
         
         /// <summary>
-        /// Control btnRegPersona.
+        /// Control btnComprar.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink btnRegPersona;
+        protected global::System.Web.UI.WebControls.ImageButton btnComprar;
         
         /// <summary>
-        /// Control imgRegPersona.
+        /// Control btnAgregarLibro.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image imgRegPersona;
+        protected global::System.Web.UI.WebControls.ImageButton btnAgregarLibro;
         
         /// <summary>
-        /// Control HyperLink1.
+        /// Control btnAgregarAutor.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink1;
+        protected global::System.Web.UI.WebControls.ImageButton btnAgregarAutor;
         
         /// <summary>
-        /// Control Image1.
+        /// Control btnEditarPersona.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image1;
+        protected global::System.Web.UI.WebControls.ImageButton btnEditarPersona;
         
         /// <summary>
-        /// Control HyperLink2.
+        /// Control btnEditarLibro.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink2;
+        protected global::System.Web.UI.WebControls.ImageButton btnEditarLibro;
         
         /// <summary>
-        /// Control Image2.
+        /// Control btnEditarAutor.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image2;
+        protected global::System.Web.UI.WebControls.ImageButton btnEditarAutor;
         
         /// <summary>
-        /// Control HyperLink3.
+        /// Control btnBajaPersona.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink HyperLink3;
+        protected global::System.Web.UI.WebControls.ImageButton btnBajaPersona;
         
         /// <summary>
-        /// Control Image3.
+        /// Control btnBajaLibro.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Image Image3;
+        protected global::System.Web.UI.WebControls.ImageButton btnBajaLibro;
+        
+        /// <summary>
+        /// Control btnConfiguracion.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton btnConfiguracion;
         
         /// <summary>
         /// Control imgError2.

@@ -22,13 +22,13 @@ namespace AB3.Interfaz
             SqlCommand cmd = new SqlCommand("insertar_usuario", con);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = txtNombre.Text;
+            cmd.Parameters.Add("@contrasenia", SqlDbType.VarChar).Value = txtContrasenia.Text;
             cmd.Parameters.Add("@direccion", SqlDbType.VarChar).Value = txtDireccion.Text;
             cmd.Parameters.Add("@ciudad", SqlDbType.VarChar).Value = txtCiudad.Text;
             cmd.Parameters.Add("@estado", SqlDbType.VarChar).Value = txtEstado.Text;
             cmd.Parameters.Add("@codigo_postal", SqlDbType.VarChar).Value = txtCodigoPostal.Text;
             cmd.Parameters.Add("@telefono", SqlDbType.VarChar).Value = txtTelefono.Text;
             cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = txtCorreo.Text;
-            cmd.Parameters.Add("@activo", SqlDbType.Char).Value = '0';
 
             try
             {
@@ -42,7 +42,7 @@ namespace AB3.Interfaz
 
             if (msgError.Text.Equals(""))
             {
-                Response.Redirect("~/Interfaz/Default.aspx");
+                msgError.Text = txtNombre.Text+" Se ha agregado con exito";
                 Limpiar();
             }
             else
@@ -65,7 +65,9 @@ namespace AB3.Interfaz
             txtCorreo.Text = "";
             txtTelefono.Text = "";
             txtDireccion.Text = "";
-            msgError.Text = "";
+            txtEstado.Text = "";
+            txtCiudad.Text = "";
+            txtCodigoPostal.Text = "";
         }
     }
 }

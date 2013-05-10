@@ -9,7 +9,8 @@
                 <nav id="Nav1" class="menu" runat="server">
                     <ul>
                         <li><a href="Default.aspx">Inicio</a></li>
-                        <li><a href="Default.aspx">Buscar</a></li>
+                       <li><a href="AgregarPersona.aspx">Registrarse</a></li>
+                        <li><a href="Buscar.aspx">Buscar</a></li>
                     </ul>
                 </nav>
             </div>
@@ -21,37 +22,34 @@
             <tr>
                 <td><asp:Label ID="Label1" class="lblRegistrar" runat="server" Text="Nombre Completo:" /></td>
                 <td><asp:TextBox ID="txtNombre" class="txt" runat="server" Height="20px" Width="200px" /></td>
-                <td><div class="asterisco"> *</div></td>
+            </tr>
+            <tr>
+                <td><asp:Label ID="Label6" class="lblRegistrar" runat="server" Text="Contraseña:" /></td>
+                <td><asp:TextBox ID="txtContrasenia" TextMode="Password" class="txt" runat="server" Height="20px" Width="200px" /></td>
             </tr>
             <tr>
                 <td><asp:Label ID="Label2" class="lblRegistrar" runat="server" Text="Correo electrónico:" /></td>
                 <td><asp:TextBox ID="txtCorreo" Class="txt" runat="server" placeholder="example@mail.com" Height="20px" Width="200px" /></td>
-                <td><div class="asterisco"> *</div></td>
             </tr>
             <tr>
                 <td><asp:Label ID="Label3" class="lblRegistrar" runat="server" Text="Teléfono:" /></td>
                 <td><asp:TextBox ID="txtTelefono" class="txt" runat="server" placeholder="506-4354-4323" Height="20px" Width="200px"/></td>
-                <td><div class="asterisco"> *</div></td>
             </tr>
             <tr>
                 <td><asp:Label ID="Label8" class="lblRegistrar" runat="server" Text="Ciudad:" /></td>
                 <td><asp:TextBox ID="txtCiudad" class="txt" runat="server" placeholder="" Height="20px" Width="200px" /></td>
-                <td><div class="asterisco"> *</div></td>
             </tr>
             <tr>
                 <td><asp:Label ID="Label4" class="lblRegistrar" runat="server" Text="Estado:" /></td>
                 <td><asp:TextBox ID="txtEstado" class="txt" runat="server" placeholder="" Height="20px" Width="200px"/></td>
-                <td><div class="asterisco"> *</div></td>
             </tr>
             <tr>
                 <td><asp:Label ID="Label5" class="lblRegistrar" runat="server" Text="Codigo Postal:" /></td>
                 <td><asp:TextBox ID="txtCodigoPostal" class="txt" runat="server" placeholder="" Height="20px" Width="200px"/></td>
-                <td><div class="asterisco"> *</div></td>
             </tr>
             <tr>
                 <td><asp:Label ID="Label7" class="lblRegistrar" runat="server" Text="Dirección:" /></td>
                 <td><asp:TextBox ID="txtDireccion" class="txta" runat="server" TextMode="MultiLine" Width="200px" /></td>
-                <td><div class="asterisco"> *</div></td>
             </tr>
             <tr>
                 <td></td>

@@ -9,8 +9,8 @@
                 <nav id="Nav1" class="menu" runat="server">
                     <ul>
                         <li><a href="Default.aspx">Inicio</a></li>
+                        <li><a href="AgregarPersona.aspx">Registrarse</a></li>
                         <li><a href="Buscar.aspx">Buscar</a></li>
-                         <li><a href="Comprar.aspx">Comprar</a></li>
                     </ul>
                 </nav>
             </div>
@@ -31,8 +31,12 @@
             </tr>
         </table>
     </div>
+        <br />
         <div class="registrar" runat="server">
-            <asp:GridView ID="gvBuscar" runat="server">
+            <asp:GridView ID="gvBuscar" runat="server" OnSelectedIndexChanged="gvBuscar_SelectedIndexChanged">
+                <Columns>
+                    <asp:CommandField SelectText="Comprar" ShowSelectButton="True" />
+                </Columns>
             </asp:GridView>
         </div>
     </form>

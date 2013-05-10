@@ -9,8 +9,8 @@
                 <nav id="Nav1" class="menu" runat="server">
                     <ul>
                         <li><a href="Default.aspx">Inicio</a></li>
+                        <li><a href="AgregarPersona.aspx">Registrarse</a></li>
                         <li><a href="Buscar.aspx">Buscar</a></li>
-                         <li><a href="Comprar.aspx">Comprar</a></li>
                     </ul>
                 </nav>
             </div>
@@ -20,20 +20,27 @@
         <br/>
         <table>
             <tr>
-                <td><asp:DropDownList ID="txtNombre" class="txt" runat="server" Height="20px" Width="200px" /></td>
+                <td><asp:DropDownList ID="ddlNombre" class="txt" runat="server" Height="20px" Width="200px" /></td>
             </tr>
             <tr>
                 <td><asp:Image ID="imgError" Visible="false" class="imgError" runat="server" ImageUrl="/Images/error1.png" />
                     &nbsp;<asp:Label ID="msgError" class="error" runat="server" Text="" /></td>
             </tr>
             <tr>
-                <td><br /><asp:Button class="btn" runat="server" Text="Dar de baja" ID="btnRegistrar" OnClick="btnRegistrar_Click"/></td>
+                <td><br /><asp:Button class="btn" runat="server" Text="Dar de baja" ID="btnBaja" OnClick="btnBaja_Click"/>
+                    <asp:Button class="btn" runat="server" Text="Dar de alta" ID="btnAlta" OnClick="btnAlta_Click"/></td>
             </tr>
         </table>
     </div>
+
         <div id="Div4" class="registrar" runat="server">
+            <br />
+                        <asp:Image ID="imgError2" Visible="false" class="imgError" runat="server" ImageUrl="/Images/error1.png" />
+                            &nbsp;<asp:Label ID="msgError2" class="error" runat="server" Text="" />
+                       <br/>
             <asp:GridView ID="gvBuscar" runat="server">
             </asp:GridView>
+
         </div>
     </form>
     

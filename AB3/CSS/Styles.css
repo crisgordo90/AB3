@@ -82,6 +82,7 @@
 }
 
 	.btn:hover {
+		color: #B6B6B6;
 		cursor: pointer;
 	}
 
@@ -95,6 +96,7 @@
 	border-radius: 3px;
 	color: #ffffff;
 }
+
 
 :focus{ 
 	outline-color:#0823e7;    

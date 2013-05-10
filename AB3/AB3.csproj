@@ -178,9 +178,17 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="CSS\Images.css" />
     <Content Include="CSS\sRegistrar.css" />
-    <Content Include="CSS\style-news.css" />
     <Content Include="CSS\Styles.css" />
     <Content Include="CSS\Tables.css" />
+    <Content Include="Images\banner %281%29.png" />
+    <Content Include="Images\banner %282%29.png" />
+    <Content Include="Images\banner %283%29.png" />
+    <Content Include="Images\banner %284%29.png" />
+    <Content Include="Images\banner %285%29.png" />
+    <Content Include="Images\banner %286%29.png" />
+    <Content Include="Images\banner %287%29.png" />
+    <Content Include="Images\banner %288%29.png" />
+    <Content Include="Images\banner.png" />
     <Content Include="Images\eliminar.png" />
     <Content Include="Images\Empresa.png" />
     <Content Include="Images\Empresa2.png" />
@@ -193,9 +201,12 @@
     <Content Include="Interfaz\AgregarAutor.aspx" />
     <Content Include="Interfaz\AgregarLibro.aspx" />
     <Content Include="Interfaz\AgregarPersona.aspx" />
+    <Content Include="Interfaz\AgregarTarjeta.aspx" />
     <Content Include="Interfaz\BajaLibro.aspx" />
     <Content Include="Interfaz\BajaPersona.aspx" />
     <Content Include="Interfaz\Buscar.aspx" />
+    <Content Include="Interfaz\Comprar.aspx" />
+    <Content Include="Interfaz\Configuracion.aspx" />
     <Content Include="Interfaz\Default.aspx" />
     <Content Include="Interfaz\EditarAutor.aspx" />
     <Content Include="Interfaz\EditarLibro.aspx" />
@@ -240,6 +251,7 @@
     <Compile Include="Clases\App_Start\BundleConfig.cs" />
     <Compile Include="Clases\App_Start\AuthConfig.cs" />
     <Compile Include="Clases\cGeneralMetodos.cs" />
+    <Compile Include="Clases\query.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -264,6 +276,13 @@
     <Compile Include="Interfaz\AgregarPersona.aspx.designer.cs">
       <DependentUpon>AgregarPersona.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Interfaz\AgregarTarjeta.aspx.cs">
+      <DependentUpon>AgregarTarjeta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaz\AgregarTarjeta.aspx.designer.cs">
+      <DependentUpon>AgregarTarjeta.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Interfaz\BajaLibro.aspx.cs">
       <DependentUpon>BajaLibro.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -284,6 +303,20 @@
     </Compile>
     <Compile Include="Interfaz\Buscar.aspx.designer.cs">
       <DependentUpon>Buscar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\Comprar.aspx.cs">
+      <DependentUpon>Comprar.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaz\Comprar.aspx.designer.cs">
+      <DependentUpon>Comprar.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaz\Configuracion.aspx.cs">
+      <DependentUpon>Configuracion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Interfaz\Configuracion.aspx.designer.cs">
+      <DependentUpon>Configuracion.aspx</DependentUpon>
     </Compile>
     <Compile Include="Interfaz\Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>

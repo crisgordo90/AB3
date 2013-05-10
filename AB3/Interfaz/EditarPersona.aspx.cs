@@ -7,6 +7,7 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using AB3.Clases;
 
 namespace AB3.Interfaz
 {
@@ -14,12 +15,27 @@ namespace AB3.Interfaz
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            try
+            {
+                query name = new query();
+                if (!IsPostBack)
+                {
+                    ddlNombre.DataSource = name.querydt("select * from tabla_Usuario");
+                    ddlNombre.DataTextField = "Nombre";
+                    ddlNombre.DataValueField = "Email";
+                    ddlNombre.DataBind();
+                }
+            }
+            catch (Exception ex)
+            {
+                msgError.Text = ex.Message;
+                imgError.Visible = true;
+            }
         }
         protected void btnRegistrar_Click(object sender, EventArgs e)
         {
             SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString);
-            SqlCommand cmd = new SqlCommand("insertar_usuario", con);
+            SqlCommand cmd = new SqlCommand("modificar_usuario", con);
             cmd.CommandType = CommandType.StoredProcedure;
             cmd.Parameters.Add("@nombre", SqlDbType.VarChar).Value = txtNombre.Text;
             cmd.Parameters.Add("@direccion", SqlDbType.VarChar).Value = txtDireccion.Text;
@@ -27,8 +43,6 @@ namespace AB3.Interfaz
             cmd.Parameters.Add("@estado", SqlDbType.VarChar).Value = txtEstado.Text;
             cmd.Parameters.Add("@codigo_postal", SqlDbType.VarChar).Value = txtCodigoPostal.Text;
             cmd.Parameters.Add("@telefono", SqlDbType.VarChar).Value = txtTelefono.Text;
-            cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = txtCorreo.Text;
-            cmd.Parameters.Add("@activo", SqlDbType.Char).Value = '0';
 
             try
             {
@@ -42,7 +56,7 @@ namespace AB3.Interfaz
 
             if (msgError.Text.Equals(""))
             {
-                Response.Redirect("~/Interfaz/Default.aspx");
+                msgError.Text = "Se ha actualizado con exito";
                 Limpiar();
             }
             else
@@ -62,10 +76,24 @@ namespace AB3.Interfaz
         {
             imgError.Visible = false;
             txtNombre.Text = "";
-            txtCorreo.Text = "";
             txtTelefono.Text = "";
             txtDireccion.Text = "";
             msgError.Text = "";
         }
+
+        protected void btnCargar_Click(object sender, EventArgs e)
+        {
+            query name = new query();
+            DataTable table = name.querydt("select nombre, direccion,	ciudad,	estado,	codigo_postal, telefono from tabla_Usuario where email='" + ddlNombre.SelectedValue + "'");
+            if (table != null)
+            {
+                txtNombre.Text = table.Rows[0].ItemArray[0].ToString();
+                txtDireccion.Text = table.Rows[0].ItemArray[1].ToString();
+                txtCiudad.Text = table.Rows[0].ItemArray[2].ToString();
+                txtEstado.Text = table.Rows[0].ItemArray[3].ToString();
+                txtCodigoPostal.Text = table.Rows[0].ItemArray[4].ToString();
+                txtTelefono.Text = table.Rows[0].ItemArray[5].ToString();
+            }
+        }    
     }
 }

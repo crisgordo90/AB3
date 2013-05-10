@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Data.SqlClient;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
 using AB3.Clases;
+using System.Data.SqlClient;
+using System.Configuration;
+using System.Data;
 
 namespace AB3.Interfaz
 {
-    public partial class BajaPersona : System.Web.UI.Page
+    public partial class Configuracion : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -25,7 +25,7 @@ namespace AB3.Interfaz
                     ddlNombre.DataValueField = "Email";
                     ddlNombre.DataBind();
                 }
-                gvBuscar.DataSource = name.querydt("select Nombre, 'activo' as Estado from tabla_Usuario where activo_usuario=1 union select nombre, 'inactivo' as Estado from tabla_Usuario where activo_usuario=0");
+                gvBuscar.DataSource = name.querydt("(select nombre, 'Administrador' as tipo  from tabla_Usuario u where privilegio=3) union (select nombre, 'Modificador' as tipo from tabla_Usuario where privilegio=2) union (select nombre, 'Consultor' as tipo from tabla_Usuario where privilegio=1)");
                 gvBuscar.DataBind();
             }
             catch (Exception ex)
@@ -47,19 +47,20 @@ namespace AB3.Interfaz
             imgError.Visible = false;
         }
 
-        protected void ConfiguracionTipo(string text)
+        protected void ConfiguracionTipo(int tipo)
         {
             try
             {
                 SqlConnection con = new SqlConnection(ConfigurationManager.ConnectionStrings["conn"].ConnectionString);
-                SqlCommand cmd = new SqlCommand(text, con);
+                SqlCommand cmd = new SqlCommand("modificar_privilegios", con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.Add("@Email", SqlDbType.VarChar).Value = ddlNombre.SelectedValue;
+                cmd.Parameters.Add("@privilegio", SqlDbType.VarChar).Value = tipo;
                 con.Open();
                 SqlDataReader dr = cmd.ExecuteReader(CommandBehavior.CloseConnection);
                 dr.Close();
                 con.Close();
-                Response.Redirect("~/Interfaz/BajaPersona.aspx");
+                Response.Redirect("~/Interfaz/Configuracion.aspx");
             }
             catch (Exception ex)
             {
@@ -74,15 +75,20 @@ namespace AB3.Interfaz
                 imgError.Visible = true;
             }
         }
-
-        protected void btnAlta_Click(object sender, EventArgs e)
+        
+        protected void btnConsultor_Click(object sender, EventArgs e)
         {
-            ConfiguracionTipo("activar_usuario");
+            ConfiguracionTipo(1);
         }
 
-        protected void btnBaja_Click(object sender, EventArgs e)
+        protected void btnMantenimiento_Click(object sender, EventArgs e)
         {
-            ConfiguracionTipo("desactivar_usuario");
+            ConfiguracionTipo(2);
+        }
+
+        protected void btnAdministrador_Click(object sender, EventArgs e)
+        {
+            ConfiguracionTipo(3);
         }
     }
 }

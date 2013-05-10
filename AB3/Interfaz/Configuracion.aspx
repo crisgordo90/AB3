@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeBehind="BajaPersona.aspx.cs" Inherits="AB3.Interfaz.BajaPersona" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.master" AutoEventWireup="true" CodeBehind="Configuracion.aspx.cs" Inherits="AB3.Interfaz.Configuracion" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 
 </asp:Content>
@@ -16,7 +16,7 @@
             </div>
         </div>
         <div id="Div3" class="registrar" runat="server">
-        <div class="titulo">Dar de baja Persona</div>
+        <div class="titulo">Privilegios</div>
         <br/>
         <table>
             <tr>
@@ -27,8 +27,11 @@
                     &nbsp;<asp:Label ID="msgError" class="error" runat="server" Text="" /></td>
             </tr>
             <tr>
-                <td><br /><asp:Button class="btn" runat="server" Text="Dar de baja" ID="btnBaja" OnClick="btnBaja_Click"/>
-                    <asp:Button class="btn" runat="server" Text="Dar de alta" ID="btnAlta" OnClick="btnAlta_Click"/></td>
+                <td><br />
+                    <asp:Button class="btn" runat="server" Text="Consultor" ID="btnConsultor"  ToolTip="Solo puede registrarse, consultar y comprar" OnClick="btnConsultor_Click" />
+                    <asp:Button class="btn" runat="server" Text="Mantenimiento" ID="btnMantenimiento" ToolTip="Puede Agregar, Modificar, Consultar y los privilegios de Consultor" OnClick="btnMantenimiento_Click" />
+                    <asp:Button class="btn" runat="server" Text="Administrador" ID="btnAdministrador" ToolTip="Tiene todos lo privilegios de mantenimiento mas configuracion" OnClick="btnAdministrador_Click" />
+                </td>
             </tr>
         </table>
     </div><div id="Div4" class="registrar" runat="server">
