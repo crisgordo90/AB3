@@ -21,20 +21,19 @@
         <table>
             <tr>
                 <td><asp:Label ID="Label1" class="lblRegistrar" runat="server" Text="Numero de Tarjeta:" /></td>
-                <td><asp:TextBox ID="txtISBM" class="txt" runat="server" placeholder="123456" Height="20px" Width="200px" /></td>
+                <td><asp:TextBox ID="txtTarjeta" class="txt" runat="server" Height="20px" Width="200px" /></td>
             </tr>
             <tr>
                 <td><asp:Label ID="Label2" class="lblRegistrar" runat="server" Text="Tipo:" /></td>
-                <td><asp:TextBox ID="txtTitulo" Class="txt" runat="server" placeholder="Los Pollitos" Height="20px" Width="200px" /></td>               
+                <td><asp:TextBox ID="txtTipo" Class="txt" runat="server" Height="20px" Width="200px" /></td>               
             </tr>
             <tr>
                 <td><asp:Label ID="Label3" class="lblRegistrar" runat="server" Text="Fecha Expiracion:" /></td>
-                <td><asp:TextBox ID="txtAnio" class="txt" runat="server" placeholder="1990" Height="20px" Width="200px"/></td>
-    
+                <td><asp:TextBox ID="txtFecha" class="txt" runat="server" placeholder="1990" Height="20px" Width="200px"/></td>
             </tr>
             <tr>
                 <td><asp:Label ID="Label8" class="lblRegistrar" runat="server" Text="Saldo:" /></td>
-                <td><asp:TextBox ID="txtStock" class="txt" runat="server" placeholder="10" Height="20px" Width="200px" /></td>
+                <td><asp:TextBox ID="txtSaldo" class="txt" runat="server" placeholder="10" Height="20px" Width="200px" /></td>
             </tr>
             <tr>
                 <td></td>

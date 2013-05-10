@@ -67,13 +67,13 @@ namespace AB3.Interfaz {
         protected global::System.Web.UI.WebControls.Label Label1;
         
         /// <summary>
-        /// Control txtISBM.
+        /// Control txtTarjeta.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtISBM;
+        protected global::System.Web.UI.WebControls.TextBox txtTarjeta;
         
         /// <summary>
         /// Control Label2.
@@ -85,13 +85,13 @@ namespace AB3.Interfaz {
         protected global::System.Web.UI.WebControls.Label Label2;
         
         /// <summary>
-        /// Control txtTitulo.
+        /// Control txtTipo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTitulo;
+        protected global::System.Web.UI.WebControls.TextBox txtTipo;
         
         /// <summary>
         /// Control Label3.
@@ -103,13 +103,13 @@ namespace AB3.Interfaz {
         protected global::System.Web.UI.WebControls.Label Label3;
         
         /// <summary>
-        /// Control txtAnio.
+        /// Control txtFecha.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtAnio;
+        protected global::System.Web.UI.WebControls.TextBox txtFecha;
         
         /// <summary>
         /// Control Label8.
@@ -121,13 +121,13 @@ namespace AB3.Interfaz {
         protected global::System.Web.UI.WebControls.Label Label8;
         
         /// <summary>
-        /// Control txtStock.
+        /// Control txtSaldo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtStock;
+        protected global::System.Web.UI.WebControls.TextBox txtSaldo;
         
         /// <summary>
         /// Control imgError.

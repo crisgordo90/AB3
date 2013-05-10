@@ -82,7 +82,7 @@ namespace AB3.Interfaz
 
         protected void btnBaja_Click(object sender, EventArgs e)
         {
-            ConfiguracionTipo("desactivar_libro");
+            ConfiguracionTipo("desac_libro");
         }
     }
 }
