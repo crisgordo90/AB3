@@ -39,7 +39,8 @@ namespace AB3.Interfaz
             cmd.Parameters.Add("@fecha_fallecimiento", SqlDbType.Date).Value = txtFallecimiento.Text;
             cmd.Parameters.Add("@pais", SqlDbType.VarChar).Value = txtPais.Text;
             cmd.Parameters.Add("@biografia", SqlDbType.VarChar).Value = txtBiografia.Text;
-
+            SqlParameter message = cmd.Parameters.Add("@strMessage", SqlDbType.VarChar, 200);
+            message.Direction = ParameterDirection.Output;
             try
             {
                 con.Open();

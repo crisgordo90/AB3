@@ -29,7 +29,8 @@ namespace AB3.Interfaz
             cmd.Parameters.Add("@codigo_postal", SqlDbType.VarChar).Value = txtCodigoPostal.Text;
             cmd.Parameters.Add("@telefono", SqlDbType.VarChar).Value = txtTelefono.Text;
             cmd.Parameters.Add("@email", SqlDbType.VarChar).Value = txtCorreo.Text;
-
+            SqlParameter message = cmd.Parameters.Add("@strMessage", SqlDbType.VarChar, 200);
+            message.Direction = ParameterDirection.Output;
             try
             {
                 con.Open();
